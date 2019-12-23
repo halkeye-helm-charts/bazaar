@@ -32,6 +32,9 @@ spec:
               containerPort: 6767
               protocol: TCP
           env:
+            - name: PYTHONWARNINGS
+              # Get rid of all those unverified warnigns
+              value: "ignore:Unverified HTTPS request"
             - name: PUID
               value: {{ .Values.bazarr.puid | quote }}
             - name: PGID
