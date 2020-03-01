@@ -40,7 +40,7 @@ spec:
             - name: PGID
               value: {{ .Values.bazarr.guid | quote }}
             - name: TZ
-              value: America/Vancouver
+              value: {{ .Values.bazarr.tz | quote }}
           livenessProbe:
             httpGet:
               path: /notifications
