@@ -34,6 +34,23 @@ bazarr:
   guid: 1000
   tz: UTC
   extraHostMounts: []
+  persistence:
+    movies:
+      enabled: false
+      storageClassName: ""
+      accessModes:
+        - ReadWriteOnce
+      size: 10Gi
+      # existingClaim: "claim"
+      # annotations: ...
+    tv:
+      enabled: false
+      storageClassName: ""
+      accessModes:
+        - ReadWriteOnce
+      size: 10Gi
+      # existingClaim: "claim"
+      # annotations: ...
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
